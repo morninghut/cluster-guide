@@ -100,7 +100,7 @@ echo "ssh-rsa AAA..." >> ~/.ssh/authorized_keys
 
 ## 传输文件
 
-~~大概会写如何使用XFTP传文件~~
+~~如何使用XFTP传文件~~
 
 ## Linux 常用操作
 
