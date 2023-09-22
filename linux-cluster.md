@@ -106,7 +106,8 @@ ssh gpu1 # 进入申请到的GPU资源，可能需要输入集群账号密码
 conda create -n test python=3.8 -y # 创建一个名为test的conda环境
 conda activate test # 激活test环境
 pip install torch torchvision torchaudio # 安装pytorch
-python -c "import torch; print(torch.cuda.is_available())" # 运行一个使用GPU的测试程序，你应当看到终端输出了"True"，这表示我们成功使用了GPU运行了测试程序
+python -c "import torch; print(torch.cuda.is_available())" # 运行一个使用GPU的测试程序
+# 你应当看到终端输出了"True"，这表示我们成功使用了GPU运行了测试程序
 # True
 ```
 
