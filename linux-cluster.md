@@ -83,16 +83,40 @@ echo "ssh-rsa AAA..." >> ~/.ssh/authorized_keys
 ![img](https://i.pstorage.space/i/jM2N9W5vw/original_new-session9.png)
 
 ### 配置 conda 环境
-~~安装conda，换源与pip换源~~
 
+* 安装conda
+直接跟随[官方指南](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)的指导安装即可，建议选择miniconda安装
+#### 换源
+不换源的话安装软件包会从conda/pypi官方站点安装，由于是国外站点因此速度和稳定性都很差，建议换源为国内的清华源和中科大源
 
-### cluster 模式快速上手
+* conda换源
 
-~~介绍如何使用cluster模式跑程序~~
+请直接跟随清华源官方教程进行换源，[清华源官方教程](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
+
+* pip换源
+
+请直接跟随清华源官方教程进行换源，[清华源官方教程](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
+
+### 运行一个使用GPU的测试程序
+我们运行一个使用GPU的测试程序，以验证我们的配置是否成功。请在Xshell中输入如下命令并回车：
+
+```bash
+salloc -p gpu-rtx3080ti -N 1 -n 2 --gres=gpu:1 -t 1:00:00 # 申请一个GPU资源
+ssh gpu1 # 进入申请到的GPU资源，可能需要输入集群账号密码
+conda create -n test python=3.8 -y # 创建一个名为test的conda环境
+conda activate test # 激活test环境
+pip install torch torchvision torchaudio # 安装pytorch
+python -c "import torch; print(torch.cuda.is_available())" # 运行一个使用GPU的测试程序，你应当看到终端输出了"True"，这表示我们成功使用了GPU运行了测试程序
+# True
+```
 
 ### 虚拟机模式
 
 ~~介绍如何使用虚拟机跑程序和它的限制~~
+
+### cluster 模式快速上手
+
+~~介绍如何使用cluster模式跑程序~~
 
 ### 可能遇到的小坑
 
