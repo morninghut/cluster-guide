@@ -111,15 +111,15 @@ python -c "import torch; print(torch.cuda.is_available())" # 运行一个使用G
 # True
 ```
 
-### 虚拟机模式
+## 虚拟机模式
 
 ~~介绍如何使用虚拟机跑程序和它的限制~~
 
-### cluster 模式快速上手
+## cluster 模式快速上手
 
 ~~介绍如何使用cluster模式跑程序~~
 
-### 可能遇到的小坑
+## 可能遇到的小坑
 
 ~~集群微信群，端口转发，3090不兼容，如何使用VSCode等坑~~
 
