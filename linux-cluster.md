@@ -127,7 +127,7 @@ python -c "import torch; print(torch.cuda.is_available())" # 运行一个使用G
 * 在看到这样的界面后表明我们成功创建了自己的虚拟机。下面让我们启动它，点击红框部分以启动虚拟机：
 ![img](https://i.pstorage.space/i/xl5dZq8N3/original_vir4.png)
 
-* 在点击后可能幼等待几秒到几十秒不等。当下图中红框中的图标由灰色改为亮起时代表虚拟机启动就绪。请点击红框部分来打开jupyter用户界面。
+* 在点击后可能等待几秒到几十秒不等。当下图中红框中的图标由灰色改为亮起时代表虚拟机启动就绪。请点击红框部分来打开jupyter用户界面。
 ![img](https://i.pstorage.space/i/Q9YnLO1w6/original_vir6.png)
 
 * 稍等几秒后你应当看到这样的界面：
